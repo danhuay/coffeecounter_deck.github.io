@@ -1,2 +1,2 @@
-# danhua-datascience.github.io
+# danhuay.github.io
 Data Science Project Website
