@@ -86,30 +86,30 @@
         <h1 class="page-header">B2C Dashboard</h1>
 
         <div class="row placeholders">
-          <div class="col-xs-6 col-sm-4 placeholder">
+          <div class="col-xs-12 col-sm-4 placeholder">
             <div id="origin"></div>
             <h4>Sales</h4>
             <span class="text-muted">(Arbitrary Unit)</span>
           </div>
 
 
-          <div class="col-xs-6 col-sm-8 placeholder">
+          <div class="col-xs-12 col-sm-8 placeholder">
 
             <div class="row">
 
-              <div class="col-xs-6 col-sm-4 placeholder">
+              <div class="col-xs-12 col-sm-4 placeholder">
                 <div id="blend"></div>
                 <h4>Single Origin / Blends</h4>
                 <span class="text-muted">Beans Profile</span>
               </div>
 
-              <div class="col-xs-6 col-sm-4 placeholder">
+              <div class="col-xs-12 col-sm-4 placeholder">
                 <div id="roastLevel"></div>
                 <h4>Roast Level</h4>
                 <span class="text-muted">Beans Profile</span>
               </div>
 
-              <div class="col-xs-6 col-sm-4 placeholder">
+              <div class="col-xs-12 col-sm-4 placeholder">
                 <div id="seasonal"></div>
                 <h4>Evergreen / Seasonal</h4>
                 <span class="text-muted">Beans Profile</span>
@@ -119,7 +119,7 @@
 
             <div class="row">
 
-              <div class="col-xs-6 col-sm-12 placeholder">
+              <div class="col-xs-12 col-sm-12 placeholder">
                 <div id="originHeatMap"></div>
                 <h4>Calendar Year / Month</h4>
                 <span class="text-muted">Click on Year or Certain Month(s)</span>
@@ -156,8 +156,8 @@
   <script>
 
   // using # to refer the id in <div>
-  var datesData = { 0:"January",1: "February",2: "March",3: "April", 4: "May", 5:"June",
-   6:"July", 7:"August", 8:"September", 9:"October", 10: "November", 11:"December"};
+  var datesData = { 1:"January",2: "February",3: "March",4: "April", 5: "May", 6:"June",
+   7:"July", 8:"August", 9:"September", 10:"October", 11: "November", 12:"December"};
 
   var originChart = dc.rowChart("#origin");
   var blendChart = dc.pieChart("#blend");
@@ -168,44 +168,38 @@
 
 
 
-  d3.csv("b2c.csv", function (err, data){
+  d3.csv("sum_b2c.csv", function (err, data){
     if (err) throw err;
 
-    //created_at,origin,blend,roast_level,type,unit_price,lbs
-    //2014-01-06 13:53:28,Panama,Single,light,Seasonal,32.4,1.5
-    //2014-01-13 20:09:09,Panama,Single,light,Seasonal,32.4,0.75
+    //year,month,origin,blend,roast_level,type,lbs
+    //2014,1,"Colombia, Brazil, Ethiopia ",Blend,dark,Evergreen,3.0
 
-
-    data.forEach(function (d) {
-      d.created_at = new Date(d.created_at);
-      d.unit_price = +d.unit_price;
-      d.lbs = +d.lbs;
-    });
 
     var ndx = crossfilter(data);
     var all = ndx.groupAll();
 
     // how many categorical features are here to be used as filters
-    var dateDim = ndx.dimension(function (d) {return d["created_at"];});
-    var yearlyDim = ndx.dimension(function (d) {return d["created_at"].getFullYear();});
-    var monthlyDim = ndx.dimension(function (d) {return d["created_at"].getMonth();});
+    var yearlyDim = ndx.dimension(function (d) {return d.year;});
+    var monthlyDim = ndx.dimension(function (d) {return d.month;});
     var originDim = ndx.dimension(function (d) {return d["origin"];});
     var blendDim = ndx.dimension(function (d) {return d["blend"];});
     var roastLevelDim = ndx.dimension(function (d) {return d["roast_level"];});
     var seasonalDim = ndx.dimension(function (d) {return d["type"];});
-    var monthOriginDim = ndx.dimension(
-      function (d) {
-        return [d.created_at.getMonth(), d.created_at.getFullYear()];
-      }
-    );
+
 
     // group of categorical features
-    var yearlyGroup = yearlyDim.group().reduceSum(function (d) {return d.lbs;});
-    var originGroup = originDim.group().reduceSum(function (d) {return d.lbs;});
-    var blendGroup = blendDim.group().reduceSum(function (d) {return d.lbs;});
-    var roastLevelGroup = roastLevelDim.group().reduceSum(function (d) {return d.lbs;});
-    var seasonalGroup = seasonalDim.group().reduceSum(function (d) {return d.lbs;});
-    var sumMonthOriginGroup = monthOriginDim.group().reduceSum(function (d) {return d.lbs;});
+    var yearlyGroup = yearlyDim.group().reduceSum(function (d) {return +d.lbs;});
+    var originGroup = originDim.group().reduceSum(function (d) {return +d.lbs;});
+    var blendGroup = blendDim.group().reduceSum(function (d) {return +d.lbs;});
+    var roastLevelGroup = roastLevelDim.group().reduceSum(function (d) {return +d.lbs;});
+    var seasonalGroup = seasonalDim.group().reduceSum(function (d) {return +d.lbs;});
+
+
+
+    runDim = ndx.dimension(function(d) { return [+d.month, +d.year]; }),
+    runGroup = runDim.group().reduceSum(function(d) { return +d.lbs; });
+
+
 
     originChart
     .height(400)
@@ -244,20 +238,35 @@
 
 
 
+//    originHeatMapChart
+//    .width(12 * 60 + 80)
+//    .height(30 * 4 + 40)
+//    .dimension(monthOriginDim)
+//    .group(sumMonthOriginGroup)
+//    .keyAccessor(function(d) { return +d.key[0]; })
+//    .valueAccessor(function(d) { return +d.key[1]; })
+//    .colorAccessor(function(d) { return +d.value; })
+//    .colors(["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"])
+//    .calculateColorDomain();
+//    //                .colorAccessor(function(d) { return +d.value; });
+//
+//    originHeatMapChart.xBorderRadius(0);
+//    originHeatMapChart.yBorderRadius(0);
+
     originHeatMapChart
-    .width(12 * 60 + 80)
-    .height(30 * 4 + 40)
-    .dimension(monthOriginDim)
-    .group(sumMonthOriginGroup)
+        .width(12 * 60 + 80)
+        .height(30 * 4 + 40)
+        .dimension(runDim)
+        .group(runGroup)
     .keyAccessor(function(d) { return +d.key[0]; })
     .valueAccessor(function(d) { return +d.key[1]; })
     .colorAccessor(function(d) { return +d.value; })
     .colors(["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"])
     .calculateColorDomain();
-    //                .colorAccessor(function(d) { return +d.value; });
 
     originHeatMapChart.xBorderRadius(0);
     originHeatMapChart.yBorderRadius(0);
+
 
     dc.renderAll();
 
