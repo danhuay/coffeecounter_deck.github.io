@@ -1,276 +1,394 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <!--<link rel="icon" href="../../favicon.ico">-->
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>insight_pj: Slides</title>
+		<meta name="description" content="Slides">
 
-  <title>Coffee Analyzer Homepage</title>
-
-  <link rel="stylesheet" href="css/dc.css">
-
-  <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="css/dashboard.css" rel="stylesheet">
-
-  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-  <!--&lt;!&ndash;[if lt IE 9]><!--<script src="../../assets/js/ie8-responsive-file-warning.js"></script>--><![endif]&ndash;&gt;-->
-  <!--<script src="../../assets/js/ie-emulation-modes-warning.js"></script>-->
-
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-</head>
-
-<body>
-
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Coffee Analyzer</a>
-      </div>
-      <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <!--<li><a href="#">Dashboard</a></li>-->
-          <!--<li><a href="#">Settings</a></li>-->
-          <li><a href="#">About Me</a></li>
-          <!--<li><a href="#">Help</a></li>-->
-        </ul>
-        <!--<form class="navbar-form navbar-right">-->
-          <!--<input type="text" class="form-control" placeholder="Search...">-->
-        <!--</form>-->
-      </div>
-    </div>
-  </nav>
-
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-3 col-md-2 sidebar">
-        <ul class="nav nav-sidebar">
-          <li class="active"><a href="#">Dashboard <span class="sr-only">(current)</span></a></li>
-          <li><a href="b2c.html">Reports</a></li>
-          <li><a href="#">Analytics</a></li>
-          <li><a href="#">Export</a></li>
-        </ul>
-        <ul class="nav nav-sidebar">
-          <!--<li><a href="">Nav item</a></li>-->
-          <!--<li><a href="">Nav item again</a></li>-->
-          <!--<li><a href="">One more nav</a></li>-->
-          <!--<li><a href="">Another nav item</a></li>-->
-          <!--<li><a href="">More navigation</a></li>-->
-        </ul>
-        <ul class="nav nav-sidebar">
-          <!--<li><a href="">Nav item again</a></li>-->
-          <!--<li><a href="">One more nav</a></li>-->
-          <!--<li><a href="">Another nav item</a></li>-->
-        </ul>
-      </div>
-      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-        <h1 class="page-header">B2C Dashboard</h1>
-
-        <div class="row placeholders">
-          <div class="col-xs-12 col-sm-4 placeholder">
-            <div id="origin"></div>
-            <h4>Sales</h4>
-            <span class="text-muted">(Arbitrary Unit)</span>
-          </div>
-
-
-          <div class="col-xs-12 col-sm-8 placeholder">
-
-            <div class="row">
-
-              <div class="col-xs-12 col-sm-4 placeholder">
-                <div id="blend"></div>
-                <h4>Single Origin / Blends</h4>
-                <span class="text-muted">Beans Profile</span>
-              </div>
-
-              <div class="col-xs-12 col-sm-4 placeholder">
-                <div id="roastLevel"></div>
-                <h4>Roast Level</h4>
-                <span class="text-muted">Beans Profile</span>
-              </div>
-
-              <div class="col-xs-12 col-sm-4 placeholder">
-                <div id="seasonal"></div>
-                <h4>Evergreen / Seasonal</h4>
-                <span class="text-muted">Beans Profile</span>
-              </div>
-
-            </div>
-
-            <div class="row">
-
-              <div class="col-xs-12 col-sm-12 placeholder">
-                <div id="originHeatMap"></div>
-                <h4>Calendar Year / Month</h4>
-                <span class="text-muted">Click on Year or Certain Month(s)</span>
-              </div>
-
-              <!--<div class="col-xs-6 col-sm-6 placeholder">-->
-                <!--&lt;!&ndash;<div id="year"></div>&ndash;&gt;-->
-                <!--<h4>Year</h4>-->
-                <!--<span class="text-muted">2014-01-01 ~ 2017-09-01</span>-->
-              <!--</div>-->
-
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Bootstrap core JavaScript
-  ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
-  <script src="js/bootstrap.min.js"></script>
-  <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-  <script src="js/vendor/holder.min.js"></script>
-  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <script src="js/ie10-viewport-bug-workaround.js"></script>
-
-  <script type="text/javascript" src="js/d3.js"></script>
-  <script type="text/javascript" src="js/crossfilter.js"></script>
-  <script type="text/javascript" src="js/dc.js"></script>
-  <script>
-
-  // using # to refer the id in <div>
-  var datesData = { 1:"January",2: "February",3: "March",4: "April", 5: "May", 6:"June",
-   7:"July", 8:"August", 9:"September", 10:"October", 11: "November", 12:"December"};
-
-  var originChart = dc.rowChart("#origin");
-  var blendChart = dc.pieChart("#blend");
-  var roastLevelChart = dc.pieChart("#roastLevel");
-  var seasonalChart = dc.pieChart("#seasonal");
-  var originHeatMapChart = dc.heatMap("#originHeatMap");
-  originHeatMapChart.colsLabel(function(d) { return datesData[d]; });
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
 
 
 
-  d3.csv("sum_b2c.csv", function (err, data){
-    if (err) throw err;
+	</head>
+	<body class="reveal-viewport theme-font-montserrat theme-color-silver-blue">
+		<div class="reveal">
+			<div class="slides">
+				<section data-id="cfc9df5967714f052ade75e175c8796c" data-background-image="insight_pj/c1ebc73ec757c8e83a3b0fda1ad2f35f.png" data-background-position="0% 100%" data-background-size="initial"><div class="sl-block" data-block-type="text" style="width: 806px; left: 142px; top: 72px; height: auto;" data-block-id="37587660f7f571756472beea7bf895f0"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h1>Coffee Analyzer:</h1>
 
-    //year,month,origin,blend,roast_level,type,lbs
-    //2014,1,"Colombia, Brazil, Ethiopia ",Blend,dark,Evergreen,3.0
+<p><span style="font-size:1.4em">Replenish Raw Coffee Inventory Wisely</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 278px; left: 670px; top: 418px;" data-block-id="324e0db39fca73f8d4fa4ec32a15a129"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align: right;"><span style="font-size:0.7em">Danhua Yan</span></p>
 
-
-    var ndx = crossfilter(data);
-    var all = ndx.groupAll();
-
-    // how many categorical features are here to be used as filters
-    var yearlyDim = ndx.dimension(function (d) {return d.year;});
-    var monthlyDim = ndx.dimension(function (d) {return d.month;});
-    var originDim = ndx.dimension(function (d) {return d["origin"];});
-    var blendDim = ndx.dimension(function (d) {return d["blend"];});
-    var roastLevelDim = ndx.dimension(function (d) {return d["roast_level"];});
-    var seasonalDim = ndx.dimension(function (d) {return d["type"];});
-
-
-    // group of categorical features
-    var yearlyGroup = yearlyDim.group().reduceSum(function (d) {return +d.lbs;});
-    var originGroup = originDim.group().reduceSum(function (d) {return +d.lbs;});
-    var blendGroup = blendDim.group().reduceSum(function (d) {return +d.lbs;});
-    var roastLevelGroup = roastLevelDim.group().reduceSum(function (d) {return +d.lbs;});
-    var seasonalGroup = seasonalDim.group().reduceSum(function (d) {return +d.lbs;});
+<p style="text-align: right;"><span style="font-size:0.7em">Insight Data Science Fellow</span></p>
+</div></div></section><section class="stack" data-id="ea8ad126c7617ede3c0198b49806278a"><section data-id="60060408263494570b5c45d338fc96fa"><div class="sl-block" data-block-type="text" style="width: 410px; left: 51px; top: 86px; height: auto;" data-block-id="ea92d840f83fd016fb9956f745630ff3"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;" dir="ui">
+<h3><span style="font-size:0.9em">Problems</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 410px; left: 51px; top: 173px; height: auto;" data-block-id="454b3ae3c2133a87539b8e48568d7e05"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin urna odio, aliquam vulputate faucibus id, elementum lobortis felis. Mauris urna dolor, placerat ac sagittis quis." style="text-align: left; z-index: 12; font-size: 80%;">
+<ul>
+	<li class="">Small department, don't have support from business intelligence team.</li>
+	<li>Inaccurate raw coffee beans inventory planning causes profit loss.</li>
+</ul>
+</div></div>
 
 
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 1306px; height: 293px; left: -134px; top: 360px;" data-block-id="c3524017a1626526577fb007b70cd835"><div class="sl-block-style" style="z-index: 10; opacity: 0.4;"><div class="sl-block-content" style="z-index: 10;"><img style="" data-natural-width="1689" data-natural-height="379" data-lazy-loaded="" data-src="insight_pj/25b8bea11f0338899d42ae4e4da697e0.png"></div></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 318px; height: 296px; left: 519px; top: 118px;" data-block-id="31341b181113c80c5393cb280b92f98b"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="318" data-natural-height="296" data-lazy-loaded="" data-src="insight_pj/ae7e90bd13697b7154b2358358d33170.png"></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 71px; height: 71px; left: 518px; top: 341px;" data-block-id="81865463f22da0306612e00aa823225a"><div class="sl-block-style" style="z-index: 14; transform: rotate(341deg);"><div class="sl-block-content" data-shape-type="symbol-thin-arrow-up-right" data-shape-fill-color="rgb(255, 229, 153)" data-shape-stretch="true" style="z-index: 14;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="4 4 24 24"><g class="shape-element" fill="rgb(255, 229, 153)"><path d="M26.001 4c-0 0-0.001 0-0.001 0h-11.999c-1.105 0-2 0.895-2 2s0.895 2 2 2h7.172l-16.586 16.586c-0.781 0.781-0.781 2.047 0 2.828 0.391 0.391 0.902 0.586 1.414 0.586s1.024-0.195 1.414-0.586l16.586-16.586v7.172c0 1.105 0.895 2 2 2s2-0.895 2-2v-14h-1.999z"></path></g></svg></div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 132px; left: 816px; top: 173px;" data-block-id="49037ca51118b21d44958d0e3d4cbe62"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; line-height: 0.91; font-size: 60%; color: rgb(53, 53, 174);" data-has-line-height="">
+<p>Other Business</p>
 
-    runDim = ndx.dimension(function(d) { return [+d.month, +d.year]; }),
-    runGroup = runDim.group().reduceSum(function(d) { return +d.lbs; });
+<p>(Wholesale)</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 132px; left: 678px; top: 111px;" data-block-id="60973e46866f23da34e7a9287205fb47"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; line-height: 0.91; font-size: 60%; color: rgb(53, 53, 174);" data-has-line-height="">
+<p>Cafes</p>
+
+<p>(Retail)</p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 183px; left: 512px; top: 86px;" data-block-id="8c2065fe73c3fee636666198ac38cc22"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18; line-height: 0.91; font-size: 60%; color: rgb(53, 53, 174);" data-has-line-height="">
+<p>Individual Customers</p>
+
+<p>(DTC)</p>
+</div></div></section><section data-id="c4cf512b504f30aa0666d41463f4c337"><div class="sl-block" data-block-type="text" style="width: 860px; left: 82px; top: 144px; height: auto;" data-block-id="c58506976d54e8075178d27cd7278290"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
+<h2>Deliberable</h2>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 860px; left: 82px; top: 257px; height: auto;" data-block-id="6368ac7b9e22a81e5a317698a5cacd41"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>How many beans should we buy in 2018?</li>
+	<li>From which origins should we buy?</li>
+</ul>
+</div></div></section></section><section data-id="a9e3e75e93c29932bc889ac72de97dd4"><div class="sl-block" data-block-type="table" style="height: auto; min-width: 120px; min-height: 30px; width: 1024px; left: 0px; top: 173px;" data-block-id="9843fd0c1ea7cf11e6ec711d226a3144"><div class="sl-block-style" style="z-index: 14;"><div class="sl-block-content" style="z-index: 14; font-size: 43%; background-color: rgba(0, 0, 0, 0); text-align: center; color: rgb(0, 0, 0);" data-table-rows="6" data-table-cols="10" data-table-border-color="rgb(159, 197, 232)"><table><tbody>
+<tr>
+<th style="border-color: rgb(159, 197, 232);">transaction_time</th>
+<th style="border-color: rgb(159, 197, 232); width: 119px;">selling_channels</th>
+<th style="border-color: rgb(159, 197, 232);">product_sku</th>
+<th style="border-color: rgb(159, 197, 232);">item_description</th>
+<th style="border-color: rgb(159, 197, 232); width: 59px;">price</th>
+<th style="border-color: rgb(159, 197, 232); width: 76px;">quantity</th>
+<th style="border-color: rgb(159, 197, 232); width: 75px;">origin</th>
+<th style="border-color: rgb(159, 197, 232); width: 94px;">blend_type</th>
+<th style="border-color: rgb(159, 197, 232); width: 85px;">roast_level</th>
+<th style="border-color: rgb(159, 197, 232);">raw_beans_weight</th>
+</tr>
+<tr>
+<td style="border-color: rgb(159, 197, 232);">2014-08-04 15:58:42</td>
+<td style="border-color: rgb(159, 197, 232); width: 119px;">DTC</td>
+<td style="border-color: rgb(159, 197, 232);">AFXXX12WB</td>
+<td style="border-color: rgb(159, 197, 232);">Ethiopia xxx 12 oz</td>
+<td style="border-color: rgb(159, 197, 232); width: 59px;">20.0</td>
+<td style="border-color: rgb(159, 197, 232); width: 76px;">1</td>
+<td style="border-color: rgb(159, 197, 232); width: 75px;">Ethiopia</td>
+<td style="border-color: rgb(159, 197, 232); width: 94px;">Single Origin</td>
+<td style="border-color: rgb(159, 197, 232); width: 85px;">medium</td>
+<td style="border-color: rgb(159, 197, 232);">NaN</td>
+</tr>
+<tr>
+<td style="border-color: rgb(159, 197, 232);">2015-06-09 19:28:31</td>
+<td style="border-color: rgb(159, 197, 232); width: 119px;">Retail</td>
+<td style="border-color: rgb(159, 197, 232);">AFYXX05FP</td>
+<td style="border-color: rgb(159, 197, 232);">Brazil xxx 5 oz</td>
+<td style="border-color: rgb(159, 197, 232); width: 59px;">10.0</td>
+<td style="border-color: rgb(159, 197, 232); width: 76px;">2</td>
+<td style="border-color: rgb(159, 197, 232); width: 75px;">NaN</td>
+<td style="border-color: rgb(159, 197, 232); width: 94px;">NaN</td>
+<td style="border-color: rgb(159, 197, 232); width: 85px;">NaN</td>
+<td style="border-color: rgb(159, 197, 232);">NaN</td>
+</tr>
+<tr>
+<td style="border-color: rgb(159, 197, 232);">2016-01-04 08:13:09</td>
+<td style="border-color: rgb(159, 197, 232); width: 119px;">Wholesale</td>
+<td style="border-color: rgb(159, 197, 232);">AFZXX05WB</td>
+<td style="border-color: rgb(159, 197, 232);">Signature Blend 5 lb</td>
+<td style="border-color: rgb(159, 197, 232); width: 59px;">50.0</td>
+<td style="border-color: rgb(159, 197, 232); width: 76px;">5</td>
+<td style="border-color: rgb(159, 197, 232); width: 75px;">NaN</td>
+<td style="border-color: rgb(159, 197, 232); width: 94px;">NaN</td>
+<td style="border-color: rgb(159, 197, 232); width: 85px;">NaN</td>
+<td style="border-color: rgb(159, 197, 232);">NaN</td>
+</tr>
+<tr>
+<td style="border-color: rgb(159, 197, 232);">...</td>
+<td style="border-color: rgb(159, 197, 232); width: 119px;">...</td>
+<td style="border-color: rgb(159, 197, 232);">...</td>
+<td style="border-color: rgb(159, 197, 232);">...</td>
+<td style="border-color: rgb(159, 197, 232); width: 59px;">...</td>
+<td style="border-color: rgb(159, 197, 232); width: 76px;">...</td>
+<td style="border-color: rgb(159, 197, 232); width: 75px;">...</td>
+<td style="border-color: rgb(159, 197, 232); width: 94px;">...</td>
+<td style="border-color: rgb(159, 197, 232); width: 85px;">...</td>
+<td style="border-color: rgb(159, 197, 232);">...</td>
+</tr>
+<tr>
+<td style="border-color: rgb(159, 197, 232);">100%</td>
+<td style="border-color: rgb(159, 197, 232); width: 119px;">100%</td>
+<td style="border-color: rgb(159, 197, 232);">100%</td>
+<td style="border-color: rgb(159, 197, 232);">100%</td>
+<td style="border-color: rgb(159, 197, 232); width: 59px;">100%</td>
+<td style="border-color: rgb(159, 197, 232); width: 76px;">100%</td>
+<td style="border-color: rgb(159, 197, 232); width: 75px;"><strong>50%</strong></td>
+<td style="border-color: rgb(159, 197, 232); width: 94px;"><strong>50%</strong></td>
+<td style="border-color: rgb(159, 197, 232); width: 85px;"><strong>50%</strong></td>
+<td style="border-color: rgb(159, 197, 232);"><strong>0%</strong></td>
+</tr>
+</tbody></table></div></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 641px; height: 156px; left: 0px; top: 201px;" data-block-id="e506c6664fd2b07866ec4028a8e68dc7"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(207, 226, 243)" data-shape-stretch="true" style="z-index: 13;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 641 156"><rect width="641" height="156" class="shape-element" fill="rgb(207, 226, 243)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 383px; height: 156px; left: 641px; top: 201px;" data-block-id="45fb543fc79031276f7a00a1f278236c"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(217, 234, 211)" data-shape-stretch="true" style="z-index: 12;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 383 156"><rect width="383" height="156" class="shape-element" fill="rgb(217, 234, 211)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 1024px; height: 28px; left: 0px; top: 173px;" data-block-id="3061209cdd4ec262152c12cb63a1e33a"><div class="sl-block-content" data-shape-type="rect" data-shape-fill-color="rgb(204, 204, 204)" data-shape-stretch="true" style="z-index: 11;"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 1024 28"><rect width="1024" height="28" class="shape-element" fill="rgb(204, 204, 204)"></rect></svg></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 240px; height: 120px; left: 196px; top: 50px;" data-block-id="da0cf6eff60bb63f7b0af951f49c0f13"><div class="sl-block-content" style="z-index: 15;"><img style="" data-natural-width="500" data-natural-height="250" data-lazy-loaded="" data-src="insight_pj/1704ba0c9ec0fb2f6f1322d52754e690.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 81px; height: 81px; left: 792px; top: 70px;" data-block-id="56213625f04c4e17645ec46bafd53a7f"><div class="sl-block-content" style="z-index: 16;"><img style="" data-natural-width="225" data-natural-height="225" data-lazy-loaded="" data-src="insight_pj/3c412d5ae9db1cadcf57d95669e25322.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 199px; left: 733px; top: 395px;" data-block-id="0ca318966cef041ba374b2e5296d6f19"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17; font-size: 60%;">
+<p><strong>Lots of Missing Values</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 0px; top: 0px;" data-block-id="fd40cb7ac2712abad126132486ac1c3d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 18;">
+<h3 style="text-align:left">Data Source: Transaction Data</h3>
+</div></div>
+<div class="sl-block" data-block-type="shape" style="min-width: 4px; min-height: 4px; width: 59px; height: 59px; left: 803px; top: 432px;" data-block-id="4a81b6cd488ee14213b6a97ada710985"><div class="sl-block-content fragment" data-shape-type="arrow-down" data-shape-fill-color="rgb(106, 168, 79)" data-shape-stretch="true" style="z-index: 19;" data-fragment-index="0"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" preserveaspectratio="none" viewbox="0 0 59 59"><polygon points="29.5,59 59,29.5 41.3,29.5 41.3,0 17.7,0 17.7,29.5 0,29.5 29.5,59" class="shape-element" fill="rgb(106, 168, 79)"></polygon></svg></div></div>
+<div class="sl-block" data-block-type="table" style="height: auto; min-width: 120px; min-height: 30px; width: 383px; left: 641px; top: 504px;" data-block-id="05e3f73e78101afefdd60bc2e981c148"><div class="sl-block-content fragment" style="z-index: 20; text-align: center; font-size: 70%; color: rgb(39, 78, 19);" data-table-cols="4" data-table-rows="1" data-table-border-color="rgba(0, 0, 0, 0)" data-fragment-index="0"><table><tbody><tr>
+<th style="width: 75px; border-color: rgba(0, 0, 0, 0);">90%</th>
+<th style="width: 94px; border-color: rgba(0, 0, 0, 0);">100%</th>
+<th style="width: 84px; border-color: rgba(0, 0, 0, 0);">90%</th>
+<th style="border-color: rgba(0, 0, 0, 0);">100%</th>
+</tr></tbody></table></div></div></section><section class="stack" data-id="24ec4e77f6939d055ac3b96f82fac5c2"><section data-id="c7936ce3f66cfe849bc79432e811e1a7">
 
 
 
-    originChart
-    .height(400)
-    .width(400)
-    .dimension(originDim)
-    .group(originGroup)
-    .data(function (group) {return group.top(10); })
-    .elasticX(true);
-
-    blendChart
-    .dimension(blendDim)
-    .group(blendGroup)
-    .on('pretransition', function(chart) {
-      chart.selectAll('text.pie-slice').text(function(d) {
-        return d.data.key + ' ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
-      })
-    });
-
-    roastLevelChart
-    .dimension(roastLevelDim)
-    .group(roastLevelGroup)
-    .on('pretransition', function(chart) {
-      chart.selectAll('text.pie-slice').text(function(d) {
-        return d.data.key + ' ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
-      })
-    });
-
-    seasonalChart
-    .dimension(seasonalDim)
-    .group(seasonalGroup)
-    .on('pretransition', function(chart) {
-      chart.selectAll('text.pie-slice').text(function(d) {
-        return d.data.key + ' ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
-      })
-    });
 
 
 
-//    originHeatMapChart
-//    .width(12 * 60 + 80)
-//    .height(30 * 4 + 40)
-//    .dimension(monthOriginDim)
-//    .group(sumMonthOriginGroup)
-//    .keyAccessor(function(d) { return +d.key[0]; })
-//    .valueAccessor(function(d) { return +d.key[1]; })
-//    .colorAccessor(function(d) { return +d.value; })
-//    .colors(["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"])
-//    .calculateColorDomain();
-//    //                .colorAccessor(function(d) { return +d.value; });
-//
-//    originHeatMapChart.xBorderRadius(0);
-//    originHeatMapChart.yBorderRadius(0);
-
-    originHeatMapChart
-        .width(12 * 60 + 80)
-        .height(30 * 4 + 40)
-        .dimension(runDim)
-        .group(runGroup)
-    .keyAccessor(function(d) { return +d.key[0]; })
-    .valueAccessor(function(d) { return +d.key[1]; })
-    .colorAccessor(function(d) { return +d.value; })
-    .colors(["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"])
-    .calculateColorDomain();
-
-    originHeatMapChart.xBorderRadius(0);
-    originHeatMapChart.yBorderRadius(0);
+<div class="sl-block" data-block-type="text" style="height: auto; width: 929px; left: 79px; top: 94px;" data-block-id="e5854e8635595e6c7c368895259dda4d"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3 style="text-align: left;">Q1: How many beans should we buy in 2018?</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 929px; left: 79px; top: 166px;" data-block-id="2fc0d76d780aaabf928d4e944d395846"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" data-fragment-index="0">
+<h3 style="text-align: left;">A1: Sales Forecast in 2018 (long-term forecast)</h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 395px; left: 79px; top: 266px;" data-block-id="6042606161243398333011c3c1ead4f7"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<ul>
+	<li class="fragment" data-fragment-index="1">B2B Wholesales</li>
+	<li class="fragment" data-fragment-index="2">Brewed in Retail Cafes</li>
+	<li class="fragment" data-fragment-index="3">Individual Customers</li>
+</ul>
+</div></div></section><section data-id="73ac67acc6f0149f7934609a681675f6">
 
 
-    dc.renderAll();
 
-  })
-  </script>
-</body>
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 301px; left: 0px; top: 0px;" data-block-id="4f7d52394d6c9d034893efca98505bf5"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;">
+<ul>
+	<li>B2B Wholesales</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 506px; height: 505px; left: 48px; top: 46px;" data-block-id="6ada0ed8553458be72c74cfcb217df74"><div class="sl-block-content fragment" style="z-index: 11;" data-fragment-index="0"><img style="" data-natural-width="1352" data-natural-height="1350" data-lazy-loaded="" data-src="insight_pj/37c58528e056c26fbbd91dc9c3ba2f02.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 252px; height: 246px; left: 772px; top: 276px;" data-block-id="72963ef28b0d3eb6079bb60b1eb634a9"><div class="sl-block-content fragment" style="z-index: 12;" data-fragment-index="2"><img style="" data-natural-width="1049" data-natural-height="1025" data-lazy-loaded="" data-src="insight_pj/027f4bf73012459c5c78d87c127991a4.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 269px; height: 263px; left: 755px; top: 13px;" data-block-id="5ef3cce3facf89350f6747e380ad83d5"><div class="sl-block-content fragment" style="z-index: 13;" data-fragment-index="1"><img style="" data-natural-width="1049" data-natural-height="1025" data-lazy-loaded="" data-src="insight_pj/1ad99b39e4aff943974dc4e1b086ca20.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 191px; left: 553px; top: 129px;" data-block-id="645c5f4f8f8342e155b8dac128cc52f9"><div class="sl-block-style" style="z-index: 14; transform: rotate(360deg);"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14; font-size: 66%;" data-fragment-index="1">
+<p><span style="font-size:19.8px">Time vs. Customers</span></p>
+</div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 191px; left: 554px; top: 372px;" data-block-id="050aa9eb8146585159a46786f1f413c1"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; font-size: 66%;" data-fragment-index="2">
+<p><strong>Trend:</strong></p>
+
+<p>Customers vs. Sales</p>
+</div></div></section><section data-id="41c288779b50ffaa10e8867a9eb215ee">
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="image" style="width: 499px; height: 505px; left: 54px; top: 71px;" data-block-id="9c5c0c6d6dc170b5fcf5cd2c6571d9a3"><div class="sl-block-content fragment" style="z-index: 11;" data-fragment-index="0"><img style="" data-natural-width="1333" data-natural-height="1350" data-lazy-loaded="" data-src="insight_pj/6aceae8720a2c3d2f001ae64a50d2247.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 218px; left: 681px; top: 0px;" data-block-id="adcc46859a1205094f971e8efdf8155f"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; font-size: 66%; background-color: rgb(234, 209, 220);" data-fragment-index="1">
+<p><strong>Trend + Seasonality</strong></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 351px; left: 0px; top: 0px;" data-block-id="d421ec2adc14d3d8925c2860b07b1b42"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<ul>
+	<li>Brewed in Retail Cafe</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 269px; height: 263px; left: 755px; top: 39px;" data-block-id="a07e8178f9f89717f1a883d219499e30"><div class="sl-block-content fragment" style="z-index: 14;" data-fragment-index="2"><img style="" data-natural-width="1049" data-natural-height="1025" data-lazy-loaded="" data-src="insight_pj/2e7a2d2347f4b260f19f30472bc9d614.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 191px; left: 564px; top: 112px;" data-block-id="bc4767c0ff64e44f7e82b9611ec32140"><div class="sl-block-style" style="z-index: 15; transform: rotate(360deg);"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; font-size: 66%;" data-fragment-index="2">
+<p><strong>Trend:</strong></p>
+
+<p><span style="color:rgb(17, 17, 17); font-size:19.8px">Number of Stores vs. Sales</span></p>
+</div></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 191px; left: 564px; top: 392px;" data-block-id="ef08a21a30181970ead1460260c80d22"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16; font-size: 66%;" data-fragment-index="3">
+<p><strong>Seasonality:</strong></p>
+
+<p>Decision Tree Regression</p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 239px; height: 249px; left: 780px; top: 308px;" data-block-id="ecff67d26da7a0ac3ad37e9babae0be2"><div class="sl-block-content fragment" style="z-index: 17;" data-fragment-index="3"><img style="" data-natural-width="1049" data-natural-height="1092" data-lazy-loaded="" data-src="insight_pj/9bb04ab1b65b2ba303825f21b0189154.png"></div></div></section><section data-id="b56e5da1abe2af7f282bba634e2d1e07">
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 430px; left: 0px; top: 0px;" data-block-id="438a56a26c849a12db83a3278ece4c11"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<ul>
+	<li>Individual Customers (DTC)</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 550px; height: 390px; left: 82px; top: 93px;" data-block-id="c4c080e9fafb17283fb1d4dbf04ef5fd"><div class="sl-block-content fragment" style="z-index: 12;" data-fragment-index="0"><img style="" data-natural-width="1602" data-natural-height="1136" data-lazy-loaded="" data-src="insight_pj/c779869b8b40f7fe0fffad77ff4737e2.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 303px; left: 711px; top: 181px;" data-block-id="2d6712612f8caf43ba2fa50760124a67"><div class="sl-block-content fragment" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" data-fragment-index="0">
+<p style="text-align:left">DTC channels are calculated based on wholesale and retail forecast values.</p>
+</div></div></section><section data-id="de0f5f7000f1e41fca8761ffaccf0324">
+
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 471px; height: 377px; left: 277px; top: 100px;" data-block-id="9827a23dd4854ceae47aa1507a62019c"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1282" data-natural-height="1025" data-lazy-loaded="" data-src="insight_pj/8f94d04ec7df396752dcadff772d0ac1.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 0px; top: 0px;" data-block-id="a9638e5e4dce703382e445abcedac301"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<h2>Forecast for 2018</h2>
+</div></div></section></section><section class="stack" data-id="6ea896c6bc5846771fdff69d8c7d33c4"><section data-id="f53d470571c6e0e8b9fb0c83b42b9f5b">
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 929px; left: 79px; top: 94px;" data-block-id="6a2fc5523109c841abf899184bd4ca79"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3 style="text-align:left">Q2: From which origins should we buy?</h3>
+</div></div>
+
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 436px; left: 79px; top: 186px;" data-block-id="18025a9151f10c34ef83333a75fe8245"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li>B2B Wholesales
+	<ul>
+		<li><span style="font-size:0.7em">Low price</span></li>
+	</ul>
+	</li>
+	<li>Brewed in Retail Cafes
+	<ul>
+		<li><span style="font-size:0.7em">Customers can't choose</span></li>
+	</ul>
+	</li>
+	<li>
+<span style="color:#006400"><strong>Individual Customers</strong></span>
+	<ul>
+		<li><span style="font-size:0.7em"><span style="color:#008000">Origins and price</span></span></li>
+	</ul>
+	</li>
+</ul>
+</div></div></section><section data-id="ba10c4d1a15ffc5a5926efaf18f7004e"><div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 646px; height: 441px; left: 0px; top: 63px;" data-block-id="da4c4aae32077d5995dfd1b6d79767c9"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="1977" data-natural-height="1350" data-lazy-loaded="" data-src="insight_pj/41683020d7971de0faf5b85b0ed8191e.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 351px; left: 673px; top: 149px;" data-block-id="1aa9fb2bc80c4e46aa91e07719ec7a07"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<ul>
+	<li>Seasonality of raw beans</li>
+	<li>Availability from distributors</li>
+	<li>Incomplete supply chain data</li>
+</ul>
+</div></div></section><section data-id="48dc5d5e9b51ed737a0c8ebfe237e61d">
+
+
+
+
+
+
+
+<div class="sl-block" data-block-type="text" style="height: auto; width: 612px; left: 168px; top: 263px;" data-block-id="28df5a761357798b857c8f63dcf2e467"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;">
+<h3 style="text-align:left">A2: Historical Sales <a href="b2c.html" target="_blank">Dashboard</a>
+</h3>
+</div></div>
+</section></section><section class="stack" data-id="f417ccab8019e4aa2433512c419be7de"><section data-id="1ed3cc006571cd3d7e920bc74a899aa6"><div class="sl-block" data-block-type="text" style="width: 921px; left: 79px; top: 73px; height: auto;" data-block-id="d6e7c3cc6b1c1ed268b308a49f1dca64"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h3><span class="s1">“Brainstorming” to “Data-informed Decisions”</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 410px; left: 79px; top: 189px; height: auto;" data-block-id="d7374e5f5d48e70230dc2bf45c614142"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin urna odio, aliquam vulputate faucibus id, elementum lobortis felis. Mauris urna dolor, placerat ac sagittis quis." style="text-align: left; z-index: 12;">
+<ul>
+	<li>Plan inventories according to selling channels forecast.</li>
+	<li>Use interactive dashboard to navigate proper raw beans origins.</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 519px; height: 176px; left: 505px; top: 216px;" data-block-id="141baeeb6612eed1532b1312d83a3b23"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="613" data-natural-height="208" data-lazy-loaded="" data-src="insight_pj/af020424d78267e9bdd06c0ce3afc42d.png"></div></div></section><section data-id="dc05483f558e4d0ada9add7a051deac4"><div class="sl-block" data-block-type="text" style="width: 921px; left: 79px; top: 73px; height: auto;" data-block-id="89227efd752e6b401d1ae677695aecb0"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="text-align: left; z-index: 11;">
+<h3><span class="s1">Suggestions to the Client</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="text" style="width: 410px; left: 79px; top: 176px; height: auto;" data-block-id="c67b82a87328e3ce4255d82fe9365b33"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin urna odio, aliquam vulputate faucibus id, elementum lobortis felis. Mauris urna dolor, placerat ac sagittis quis." style="text-align: left; z-index: 12;">
+<p>Keep tracking data throughout the supply chain:</p>
+
+<ul>
+	<li>Cost of raw coffee beans</li>
+	<li>Inventory levels</li>
+	<li>Replenish histories</li>
+	<li>Product distribution</li>
+	<li>Promotions</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 511px; height: 239px; left: 512px; top: 182px;" data-block-id="6bb6fade3603202feba55a8a78c1bc6f"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="840" data-natural-height="393" data-lazy-loaded="" data-src="insight_pj/16c053bd247bb1749a02ae995f154ded.png"></div></div></section></section><section data-id="83e89e7905c00fb109eed7ae9ef3cc53"><div class="sl-block" data-block-type="text" style="width: 374px; left: 0px; top: 35px; height: auto;" data-block-id="4a60901fc864e45a2482ce5b939c5103"><div class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text" style="z-index: 11;">
+<h2>Danhua Yan</h2>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 126px; height: 124px; left: 474px; top: 10px;" data-block-id="a5419bc735f4e45ee8f690618799798c"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="638" data-natural-height="626" data-lazy-loaded="" data-src="insight_pj/012260e9a96e6937e03a5f94d78a8e41.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 324px; height: 114px; left: 656px; top: 17px;" data-block-id="6cdaa8ab1f4b60d96331f2b4beb1a353"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="727" data-natural-height="256" data-lazy-loaded="" data-src="insight_pj/6ff96bfae743d338645071a9cd2ccce3.png"></div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 452px; height: 293px; left: 528px; top: 246px;" data-block-id="648530d582a409007182117ec1099dea"><div class="sl-block-content" style="z-index: 14;"><img style="" data-natural-width="1276" data-natural-height="827" data-lazy-loaded="" data-src="insight_pj/9b008173f4d49c80f79567390b3889c7.png"></div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 430px; left: 528px; top: 171px;" data-block-id="d38a03fad9d3c188cb73f9eb1890c106"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15; line-height: 0.819;" data-has-line-height="">
+<p><span style="font-size:0.7em"><strong>Shape / Dimension vs. Performance</strong></span></p>
+
+<p><span style="font-size:0.7em"><strong>Image data / Numerical Data</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" style="height: auto; min-width: 30px; min-height: 30px; width: 368px; left: 20px; top: 125px;" data-block-id="69a9c5a62704d7b8e668c7edfc2f040c"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p style="text-align:left"><span style="font-size:0.7em"><strong>Ph.D. candidate</strong> in Materials Science and Engineering</span></p>
+
+<p style="text-align:left"><span style="font-size:0.7em"><strong>Scientific Associate</strong> at Center for Functional Nanomaterials, Brookhaven National Laboratory</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" style="min-width: 30px; min-height: 30px; width: 467px; height: 189px; left: 20px; top: 350px;" data-block-id="faed9349ec516e38a7af9d66603dd7d0"><div class="sl-block-content" style="z-index: 17;"><img style="" data-natural-width="800" data-natural-height="323" data-lazy-loaded="" data-src="insight_pj/27682aee32bba0d4a6c99640cd1444e1.png"></div></div></section>
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1079468,"slug":"insight_pj","title":"insight_pj","description":"Demo slides.","width":1024,"height":576,"visibility":"all","published_at":"2017-09-24T22:14:02.657Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/06bbdfacfc164cf78f10caeeae2eebf1/thumb.jpg?1506295269","view_count":1,"user":{"id":762516,"username":"danhuayan","name":null,"description":null,"thumbnail_url":"https://www.gravatar.com/avatar/9bb6e86c8545a2a1af0886c26fc82c54?s=140\u0026d=https%3A%2F%2Fs3.amazonaws.com%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":true,"pro":false,"lite":true,"team_id":null,"settings":{"id":613173,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"silver-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"should_loop":false,"share_notes":false,"slide_number":false,"rtl":false,"version":2,"collaborative":null,"deck_user_editor_limit":1,"data_updated_at":1506308846749,"font_typekit":null,"font_google":null,"notes":{}}};
+
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/head.min.js"></script>
+		<script src="lib/reveal.min.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 1024,
+				height: 576,
+				margin: 0.05,
+
+				controls: true,
+				progress: true,
+				history: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: false,
+
+				autoSlide: 0 || 0,
+				autoSlideStoppable: true,
+
+				center: false,
+				loop: false,
+				rtl: false,
+
+				transition: "slide",
+				backgroundTransition: "slide",
+
+				dependencies: [
+					{ src: 'lib/reveal-plugins/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/highlight/highlight.js', async: true, callback: function() { hljs.initHighlighting(); hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/reveal-plugins/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+
+		
+
+	</body>
 </html>
