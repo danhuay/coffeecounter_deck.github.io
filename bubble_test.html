@@ -5,9 +5,9 @@
 	<title>Bubble Chart</title>
 </head>
 <body>
-	<div id="bubbleChart"></div>
+	<!--<div id="bubbleChart"></div>-->
 	<div class="row">
-		<img src="online_sales_price.png" style="width: 600px;">
+		<div id="table"></div>
 	</div>
 	<script type="text/javascript" src="js/d3.js"></script>
 	<script type="text/javascript" src="js/crossfilter.js"></script>
@@ -20,51 +20,61 @@ d3.csv("b2c.csv", function (err, data) {
 
     var ndx = crossfilter(data);
     var originDim = ndx.dimension(function (d) {return d.origin;});
-	var originGroup = originDim.group().reduce(
-	    function (p,v){
-	        ++p.count;
-	        p.totalSales += v.sales;
-	        p.totalUnitPrice += v.unit_price;
-	        p.avgUnitPrice = p.totalUnitPrice / p.count;
-	        return p;
-	    },
-		function (p,v){
-	        --p.count;
-	        p.totalSales -= v.sales;
-	        p.totalUnitPrice -= v.unit_price;
-	        p.avgUnitPrice = p.totalUnitPrice / p.count;
-	        return p;
-		},
-		function (){
-		    return{
-		        count: 0,
-			    totalSales: 0,
-			    totalUnitPrice: 0,
-			    avgUnitPrice: 0
-		    };
-		}
-
-	);
+    var originGroup;
+    originGroup = originDim.group().reduce(
+        function (p, v) {
+            ++p.count;
+            p.totalSales += v.sales;
+            p.totalUnitPrice += v.unit_price;
+            p.avgUnitPrice = p.totalUnitPrice / p.count;
+            return p;
+        },
+        function (p, v) {
+            --p.count;
+            p.totalSales -= v.sales;
+            p.totalUnitPrice -= v.unit_price;
+            p.avgUnitPrice = p.totalUnitPrice / p.count;
+            return p;
+        },
+        function () {
+            return {
+                count: 0,
+                totalSales: 0,
+                totalUnitPrice: 0,
+                avgUnitPrice: 0
+            };
+        }
+    )
+	var origin = function (p) {return "origin"};
+	
+	var dataTable = dc.dataTable("#table");
+	dataTable
+		.dimension(originGroup)
+		.group(origin)
+		.columns([function (d) {return d.count},
+				  function (d) {return d.value.totalSales},
+				  function (d) {return d.value.avgUnitPrice}]);
+//	dataTable.render();
 
     var bubbleChart = dc.bubbleChart("#bubbleChart");
 
-    bubbleChart
-        .width(700)
-        .height(400)
-        .transitionDuration(1500)
-        .margins({top: 10, right: 50, bottom: 40, left: 50})
-        .dimension(originDim)
-        .group(originGroup)
-        .keyAccessor(function (p) {
-            return p.avgUnitPrice;
-        })
-        .valueAccessor(function (p) {
-            return p.totalSales;
-        })
-	    .x(d3.scale.linear())
-	    .y(d3.scale.linear())
-	    .elasticX(true)
-	    .elasticY(true);
+//    bubbleChart
+//        .width(700)
+//        .height(400)
+//        .transitionDuration(1500)
+//        .margins({top: 10, right: 50, bottom: 40, left: 50})
+//        .dimension(originDim)
+//        .group(originGroup)
+//        .keyAccessor(function (p) {
+//            return p.avgUnitPrice;
+//        })
+//        .valueAccessor(function (p) {
+//            return p.totalSales;
+//        })
+//	    .x(d3.scale.linear())
+//	    .y(d3.scale.linear())
+//	    .elasticX(true)
+//	    .elasticY(true);
 
     dc.renderAll();
 });

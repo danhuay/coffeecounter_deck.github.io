@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60c1ee79-994e-496e-a8bb-ac327ad40efe" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/insight_pj/41683020d7971de0faf5b85b0ed8191e.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/insight_pj/027f4bf73012459c5c78d87c127991a4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/insight_pj/1ad99b39e4aff943974dc4e1b086ca20.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/insight_pj/2e7a2d2347f4b260f19f30472bc9d614.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/insight_pj/3f26f88ebdc41de8920e7aedb14e7845.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/insight_pj/c779869b8b40f7fe0fffad77ff4737e2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/insight_pj/cef23e662de761db76b75bd378201192.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/dc.css" afterPath="$PROJECT_DIR$/css/dc.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bubble_test.html" afterPath="$PROJECT_DIR$/bubble_test.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new_b2c.html" afterPath="$PROJECT_DIR$/new_b2c.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,11 +36,9 @@
       <file leaf-file-name="bubble_test.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bubble_test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="10" selection-end-column="10" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="175">
+              <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -42,13 +46,11 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2115">
-              <caret line="141" column="202" lean-forward="false" selection-start-line="141" selection-start-column="202" selection-end-line="141" selection-end-column="202" />
+            <state relative-caret-position="180">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
-                <marker date="1506515976000" expanded="true" signature="32495:32622" ph="..." />
-                <marker date="1506515976000" expanded="true" signature="32801:33771" ph="..." />
-                <marker date="1506515976000" expanded="true" signature="32824:33758" ph="{&quot;transition&quot;: &quot;slide&quot;...}" />
-                <marker date="1506515976000" expanded="true" signature="33194:33753" ph="[...]" />
+                <element signature="n#style#0;n#th#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#7;n#section#0;n#section#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1506548944000" expanded="true" signature="35158:35284" ph="..." />
               </folding>
             </state>
           </provider>
@@ -57,11 +59,9 @@
       <file leaf-file-name="new_b2c.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/new_b2c.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="64" column="45" lean-forward="true" selection-start-line="64" selection-start-column="45" selection-end-line="64" selection-end-column="45" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="194">
+              <caret line="178" column="41" lean-forward="true" selection-start-line="178" selection-start-column="41" selection-end-line="178" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -87,6 +87,7 @@
       <find>origin</find>
       <find>barchart</find>
       <find>.png</find>
+      <find>#2</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -112,8 +113,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="67" />
-    <option name="y" value="30" />
+    <option name="x" value="193" />
+    <option name="y" value="23" />
     <option name="width" value="1183" />
     <option name="height" value="797" />
   </component>
@@ -132,8 +133,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -206,10 +207,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="30" width="1183" height="797" extended-state="0" />
+    <frame x="193" y="23" width="1183" height="797" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22699386" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23400526" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27207977" sideWeight="0.503139" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329148" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -296,11 +297,9 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/bubble_test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="10" selection-end-column="10" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -309,10 +308,62 @@
         <state relative-caret-position="2115">
           <caret line="141" column="202" lean-forward="false" selection-start-line="141" selection-start-column="202" selection-end-line="141" selection-end-column="202" />
           <folding>
-            <marker date="1506515976000" expanded="true" signature="32495:32622" ph="..." />
-            <marker date="1506515976000" expanded="true" signature="32801:33771" ph="..." />
-            <marker date="1506515976000" expanded="true" signature="32824:33758" ph="{&quot;transition&quot;: &quot;slide&quot;...}" />
-            <marker date="1506515976000" expanded="true" signature="33194:33753" ph="[...]" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#7;n#section#0;n#section#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1506548944000" expanded="true" signature="35158:35284" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_b2c.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3780">
+          <caret line="252" column="12" lean-forward="true" selection-start-line="252" selection-start-column="12" selection-end-line="252" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bubble_test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2115">
+          <caret line="141" column="202" lean-forward="false" selection-start-line="141" selection-start-column="202" selection-end-line="141" selection-end-column="202" />
+          <folding>
+            <element signature="n#style#0;n#th#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#7;n#section#0;n#section#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1506548944000" expanded="true" signature="35158:35284" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_b2c.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="64" column="45" lean-forward="true" selection-start-line="64" selection-start-column="45" selection-end-line="64" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bubble_test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="10" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2115">
+          <caret line="141" column="202" lean-forward="false" selection-start-line="141" selection-start-column="202" selection-end-line="141" selection-end-column="202" />
+          <folding>
+            <element signature="n#style#0;n#th#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#7;n#section#0;n#section#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1506548944000" expanded="true" signature="35158:35284" ph="..." />
           </folding>
         </state>
       </provider>
@@ -321,9 +372,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2565">
           <caret line="171" column="16" lean-forward="true" selection-start-line="171" selection-start-column="16" selection-end-line="171" selection-end-column="16" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -331,9 +380,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -342,10 +389,8 @@
         <state relative-caret-position="2085">
           <caret line="139" column="384" lean-forward="false" selection-start-line="139" selection-start-column="380" selection-end-line="139" selection-end-column="384" />
           <folding>
-            <marker date="1506515976000" expanded="true" signature="32495:32622" ph="..." />
-            <marker date="1506515976000" expanded="true" signature="32801:33771" ph="..." />
-            <marker date="1506515976000" expanded="true" signature="32824:33758" ph="{&quot;transition&quot;: &quot;slide&quot;...}" />
-            <marker date="1506515976000" expanded="true" signature="33194:33753" ph="[...]" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#7;n#section#0;n#section#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1506548944000" expanded="true" signature="35158:35284" ph="..." />
           </folding>
         </state>
       </provider>
@@ -354,9 +399,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1875">
           <caret line="125" column="71" lean-forward="false" selection-start-line="125" selection-start-column="71" selection-end-line="125" selection-end-column="71" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -364,9 +407,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -374,9 +415,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1875">
           <caret line="125" column="71" lean-forward="true" selection-start-line="125" selection-start-column="71" selection-end-line="125" selection-end-column="71" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -384,9 +423,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
           <caret line="47" column="23" lean-forward="true" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -394,9 +431,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3630">
           <caret line="242" column="0" lean-forward="true" selection-start-line="242" selection-start-column="0" selection-end-line="242" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -411,9 +446,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3825">
           <caret line="255" column="52" lean-forward="false" selection-start-line="255" selection-start-column="52" selection-end-line="255" selection-end-column="52" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -533,34 +566,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bubble_test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="10" selection-end-column="10" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="175">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2115">
-          <caret line="141" column="202" lean-forward="false" selection-start-line="141" selection-start-column="202" selection-end-line="141" selection-end-column="202" />
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
-            <marker date="1506515976000" expanded="true" signature="32495:32622" ph="..." />
-            <marker date="1506515976000" expanded="true" signature="32801:33771" ph="..." />
-            <marker date="1506515976000" expanded="true" signature="32824:33758" ph="{&quot;transition&quot;: &quot;slide&quot;...}" />
-            <marker date="1506515976000" expanded="true" signature="33194:33753" ph="[...]" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#7;n#section#0;n#section#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1506548944000" expanded="true" signature="35158:35284" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/new_b2c.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="64" column="45" lean-forward="true" selection-start-line="64" selection-start-column="45" selection-end-line="64" selection-end-column="45" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="194">
+          <caret line="178" column="41" lean-forward="true" selection-start-line="178" selection-start-column="41" selection-end-line="178" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
