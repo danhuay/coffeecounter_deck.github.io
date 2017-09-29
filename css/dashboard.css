@@ -9,6 +9,10 @@ body {
     color: #fdf6e3;
 }
 
+a {
+    color: orange;
+}
+
 
 /*
  * Global add-ons
