@@ -208,3 +208,7 @@ div.dc-chart {
 .dc-hard .number-display {
   float: none; }
 
+.dc-chart .axis text {
+    fill: white;
+}
+

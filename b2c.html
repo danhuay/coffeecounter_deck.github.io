@@ -9,7 +9,7 @@
   <meta name="author" content="">
   <!--<link rel="icon" href="../../favicon.ico">-->
 
-  <title>Coffee Analyzer Homepage</title>
+  <title>Coffee Counter Homepage</title>
 
   <link rel="stylesheet" href="css/dc.css">
 
@@ -35,7 +35,8 @@
 
 <body>
 
-  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: #2c3e50;">
+  <!--<nav class="navbar navbar-light" style="background-color: #e3f2fd;">-->
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -44,13 +45,13 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Coffee Analyzer</a>
+        <a class="navbar-brand" href="#">Coffee Counter</a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
           <!--<li><a href="#">Dashboard</a></li>-->
           <!--<li><a href="#">Settings</a></li>-->
-          <li><a href="#">About Me</a></li>
+          <li><a href="index.html#/9">About Me</a></li>
           <!--<li><a href="#">Help</a></li>-->
         </ul>
         <!--<form class="navbar-form navbar-right">-->
@@ -64,10 +65,8 @@
     <div class="row">
       <div class="col-sm-3 col-md-2 sidebar">
         <ul class="nav nav-sidebar">
-          <li class="active"><a href="index.html">Back to Main<span class="sr-only">(current)</span></a></li>
-          <li><a href="b2c.html">B2C Dashboard</a></li>
-          <li><a href="#">Analytics</a></li>
-          <li><a href="#">Export</a></li>
+          <li class="active"><a href="index.html">To Demo Slides Home<span class="sr-only">(current)</span></a></li>
+          <li><a href="index.html#/4">Sales Forecast</a></li>
         </ul>
         <!--<ul class="nav nav-sidebar">-->
           <!--<li><a href="">Nav item</a></li>-->
@@ -84,6 +83,8 @@
       </div>
       <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
         <h1 class="page-header">B2C Dashboard</h1>
+	      <P> This dashboard includes transactions from Jan 2014 to Sep 2017. <br>
+		      Click on different filters to find best selling origins.</P>
 
         <div class="row placeholders">
 	        <div class="row">
@@ -98,11 +99,14 @@
           <div class="col-xs-12 col-sm-4 placeholder">
 	          <div class="row" align="left">
                   <h4>Sales</h4>
-		          <span class="text-muted">(Arbitrary Unit)</span>
 	          </div>
 	          <div class="row">
 		          <div id="origin"></div>
 	          </div>
+              <div class="row">
+	              <p align="left">Sales are normalized, true to scale. <br>
+	              Colors of the bars are not related to meaningful values.</p>
+              </div>
           </div>
 
 
@@ -110,7 +114,7 @@
 	          
 	          <div class="row">
 		          
-	              <div class="col-xs-12 col-sm-4 placeholder">
+	              <div class="col-xs-12 col-sm-3 placeholder">
 		              <div class="row">
 			              <h4>Single Origin / Blends</h4>
 			              <span class="text-muted">Beans Profile</span>
@@ -118,9 +122,13 @@
 		              <div class="row">
 			              <div id="blend"></div>
 		              </div>
+		              <div class="row">
+			              <p align="left">Single origin products are made with coffee beans from one domain origin.<br>
+			              Blend products are from multiple origins.</p>
+		              </div>
 	              </div>
 
-	              <div class="col-xs-12 col-sm-4 placeholder">
+	              <div class="col-xs-12 col-sm-3 placeholder">
 		              <div class="row">
 			              <h4>Roast Level</h4>
 			              <span class="text-muted">Beans Profile</span>
@@ -128,15 +136,35 @@
 		              <div class="row">
 			              <div id="roastLevel"></div>
 		              </div>
+		              <div class="row">
+			              <p align="left">Roast level for different beans.</p>
+		              </div>
 	              </div>
 
-	              <div class="col-xs-12 col-sm-4 placeholder">
+	              <div class="col-xs-12 col-sm-3 placeholder">
 		              <div class="row">
 			              <h4>Evergreen / Seasonal</h4>
-			              <span class="text-muted">Beans Profile</span>
+			              <span class="text-muted">Bean Profile</span>
 		              </div>
 		              <div class="row">
 			              <div id="seasonal"></div>
+		              </div>
+		              <div class="row">
+			              <p align="left">Evergreen beans are available throughout the year. <br>
+			              Seasonal beans are only available once/twice a year.</p>
+		              </div>
+	              </div>
+		          
+		          <div class="col-xs-12 col-sm-3 placeholder">
+		              <div class="row">
+			              <h4>In Store / Online</h4>
+			              <span class="text-muted">Selling Channels</span>
+		              </div>
+		              <div class="row">
+			              <div id="source"></div>
+		              </div>
+			          <div class="row">
+			              <p align="left">Individual customers are able to buy products from online store and retail cafes.</p>
 		              </div>
 	              </div>
 		          
@@ -151,14 +179,28 @@
 		              <div class="row" align="center">
 			              <div id="originHeatMap"></div>
 		              </div>
+		              <div class="row">
+			              <p align="left">Colors of the tiles are associated with the monthly sales.<br>
+			              The darker the color is, the higher the monthly sales.</p>
+		              </div>
 	              </div>
               </div>
+	          
+	          <!--<div class="row">-->
+		          <!--<div id="bubbleChart"></div>-->
+	          <!--</div>-->
+
 	          
           </div>
         </div>
       </div>
+
     </div>
+
   </div>
+  <!--<div class="row" align="center">-->
+		<!--<img src="online_sales_price.png" style="width: 600px;">-->
+	<!--</div>-->
 
   <!-- Bootstrap core JavaScript
   ================================================== -->
@@ -181,19 +223,21 @@
    7:"July", 8:"August", 9:"September", 10:"October", 11: "November", 12:"December"};
 
   var originChart = dc.rowChart("#origin");
+  var sourceChart = dc.pieChart("#source");
   var blendChart = dc.pieChart("#blend");
   var roastLevelChart = dc.pieChart("#roastLevel");
   var seasonalChart = dc.pieChart("#seasonal");
   var originHeatMapChart = dc.heatMap("#originHeatMap");
+
   originHeatMapChart.colsLabel(function(d) { return datesData[d]; });
 
 
 
-  d3.csv("sum_b2c.csv", function (err, data){
+  d3.csv("b2c.csv", function (err, data){
     if (err) throw err;
 
-    //year,month,origin,blend,roast_level,type,lbs
-    //2014,1,"Colombia, Brazil, Ethiopia ",Blend,dark,Evergreen,3.0
+	//year,month,origin,source,blend,roast_level,type,sales,unit_price
+	//2014,1,"Colombia, Brazil, Ethiopia ",In Store,Blend,dark,Evergreen,3.0,13.70222222222222
 
 
     var ndx = crossfilter(data);
@@ -202,23 +246,97 @@
     // how many categorical features are here to be used as filters
     var yearlyDim = ndx.dimension(function (d) {return d.year;});
     var monthlyDim = ndx.dimension(function (d) {return d.month;});
+    var sourceDim = ndx.dimension(function (d) {return d.source;});
     var originDim = ndx.dimension(function (d) {return d["origin"];});
     var blendDim = ndx.dimension(function (d) {return d["blend"];});
     var roastLevelDim = ndx.dimension(function (d) {return d["roast_level"];});
     var seasonalDim = ndx.dimension(function (d) {return d["type"];});
 
 
+
     // group of categorical features
-    var yearlyGroup = yearlyDim.group().reduceSum(function (d) {return +d.lbs;});
-    var originGroup = originDim.group().reduceSum(function (d) {return +d.lbs;});
-    var blendGroup = blendDim.group().reduceSum(function (d) {return +d.lbs;});
-    var roastLevelGroup = roastLevelDim.group().reduceSum(function (d) {return +d.lbs;});
-    var seasonalGroup = seasonalDim.group().reduceSum(function (d) {return +d.lbs;});
+    var yearlyGroup = yearlyDim.group().reduceSum(function (d) {return +d.sales;});
+    var sourceGroup = sourceDim.group().reduceSum(function (d) {return +d.sales;});
+    var originGroup = originDim.group().reduceSum(function (d) {return +d.sales;});
+    var blendGroup = blendDim.group().reduceSum(function (d) {return +d.sales;});
+    var roastLevelGroup = roastLevelDim.group().reduceSum(function (d) {return +d.sales;});
+    var seasonalGroup = seasonalDim.group().reduceSum(function (d) {return +d.sales;});
 
 
 
-    runDim = ndx.dimension(function(d) { return [+d.month, +d.year]; }),
-    runGroup = runDim.group().reduceSum(function(d) { return +d.lbs; });
+
+    var runDim = ndx.dimension(function(d) { return [+d.month, +d.year]; });
+    var runGroup = runDim.group().reduceSum(function(d) { return +d.sales; });
+    
+    var originBubbleGroup = originDim.group().reduce(
+	    function (p,v){
+	        ++p.count;
+	        p.totalSales += v.sales;
+	        p.avgSales = p.totalSales / p.count;
+	        p.totalUnitPrice += v.unit_price;
+	        p.avgUnitPrice = p.totalUnitPrice / p.count;
+	        return p;
+	    },
+		function (p,v){
+	        --p.count;
+	        p.totalSales -= v.sales;
+	        p.avgSales = p.totalSales / p.count;
+	        p.totalUnitPrice -= v.unit_price;
+	        p.avgUnitPrice = p.totalUnitPrice / p.count;
+	        return p;
+		},
+		function (){
+		    return{
+		        count: 0,
+			    totalSales: 0,
+			    avgSales: 0,
+			    totalUnitPrice: 0,
+			    avgUnitPrice: 0
+		    };
+		}
+
+	);
+
+    var bubbleChart = dc.bubbleChart("#bubbleChart");
+    var xRange = [-10, d3.max(originBubbleGroup.all(), function(d) { return d.value.avgUnitPrice + d.value.totalSales*2; }) ],
+    yRange = [-10, d3.max(originBubbleGroup.all(), function(d) { return d.value.avgSales + d.value.totalSales*2; }) ];
+
+    bubbleChart
+        .width(990)
+        .height(400)
+        .transitionDuration(1500)
+//        .margins({top: 10, right: 50, bottom: 40, left: 50})
+        .dimension(originDim)
+        .group(originBubbleGroup)
+        .colors(["#ffffd9", "#edf8b1", "#c7e9b4", "#7fcdbb", "#41b6c4", "#1d91c0", "#225ea8", "#253494", "#081d58"])
+	    .colorDomain([-500, 500])
+        .colorAccessor(function (p){
+	        return +p.value.avgUnitPrice;
+	    })
+        .keyAccessor(function (p){
+            return p.value.avgUnitPrice;
+        })
+        .valueAccessor(function (p){
+            return p.value.avgSales;
+        })
+	    .radiusValueAccessor(function (p){
+	        return p.value.totalSales;
+	    })
+	    .maxBubbleRelativeSize(0.7)
+	    .x(d3.scale.linear().domain(xRange))
+	    .y(d3.scale.linear().domain(yRange))
+	    .r(d3.scale.linear().domain([0, 4000]))
+	    .elasticX(true)
+	    .elasticY(true)
+        .xAxisLabel('Unit Price')
+	    .yAxisLabel('Sales')
+	    .renderLabel(true)
+	    .label(function(p){
+	        return p.key;
+	    })
+        .on('renderlet', function(chart, filter){
+        chart.svg().select(".chart-body").attr("clip-path",null);
+        });
 
 
 
@@ -228,9 +346,12 @@
     .dimension(originDim)
     .group(originGroup)
     .data(function (group) {return group.top(10); })
-    .elasticX(true);
+    .elasticX(true)
+    .xAxis().tickFormat(function(v) { return ""; });
 
     blendChart
+    .width(175)
+    .height(175)
     .dimension(blendDim)
     .group(blendGroup)
     .on('pretransition', function(chart) {
@@ -238,8 +359,21 @@
         return d.data.key + ' ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
       })
     });
+    
+    sourceChart
+    .width(175)
+    .height(175)
+    .dimension(sourceDim)
+    .group(sourceGroup)
+    .on('pretransition', function(chart) {
+      chart.selectAll('text.pie-slice').text(function(d) {
+        return d.data.key + ' ' + dc.utils.printSingleValue((d.endAngle - d.startAngle) / (2*Math.PI) * 100) + '%';
+      })
+    });
 
     roastLevelChart
+    .width(175)
+    .height(175)
     .dimension(roastLevelDim)
     .group(roastLevelGroup)
     .on('pretransition', function(chart) {
@@ -249,6 +383,8 @@
     });
 
     seasonalChart
+    .width(175)
+    .height(175)
     .dimension(seasonalDim)
     .group(seasonalGroup)
     .on('pretransition', function(chart) {
@@ -287,10 +423,11 @@
 
     originHeatMapChart.xBorderRadius(0);
     originHeatMapChart.yBorderRadius(0);
-
-
+	  
+	  
+	  
     dc.renderAll();
-
+	  
   })
   </script>
 </body>
